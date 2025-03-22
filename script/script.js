@@ -8,6 +8,7 @@ function div_build(element){
     return `<div class="tile" id="${element["dex number"]}" ${types_str} name="${element["pokemon name"]}" onClick="obscure(this.id)"><img class="" src="${src}"><p>${element["pokemon name"]}</p></div>`  
 }
 function src_build(dex_num){
+    dex_num = dex_num.lenght>3?dex_num.slice(1): dex_num;
     return `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${dex_num}.png`
 }
 function filter(type,check){
